@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".QuizRezults">
+
+    <ImageView
+        android:id="@+id/congratulationIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pozz" />
+
+    <TextView
+        android:id="@+id/succsessTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/congratulationIcon"
+        android:text="@string/result"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/succsessTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/correctAnswears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Количество правильных ответов: 0"
+            android:textStyle="bold"
+            android:textColor="#00C855"/>
+
+        <TextView
+            android:id="@+id/incorrectAnswears"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Количество неправильных ответов: 0"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#DD2C00"/>
+
+        <!-- Добавленные текстовые поля для отображения баллов и процентов -->
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Баллы: 0"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#FFA500"/>
+
+
+        <TextView
+            android:id="@+id/percentageText"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Процент: 0%"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#FFA500"/>
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startNewQuizBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/start_new_quiz"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_back_green20"/>
+
+</RelativeLayout>
