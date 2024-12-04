@@ -6,30 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/back"
+    android:background="@drawable/fon_pd"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/quizIcon"
+        android:id="@+id/joldoIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
+        android:layout_below="@+id/currentUser"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="80dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/quiz" />
+        android:src="@drawable/joldo" />
 
-    <TextView
-        android:id="@+id/choseTopic"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/quizIcon"
-        android:textColor="#FFFFFF"
-        android:text="@string/choose_quiz_2"
-        />
+
 
     <TextView
         android:id="@+id/currentUser"
@@ -38,15 +29,15 @@
         android:layout_marginTop="10dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textColor="#0070FF"
+        android:textSize="24sp"
         android:textStyle="bold"
         />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/choseTopic"
+        android:layout_below="@+id/joldoIcon"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,182 +51,117 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:weightSum="2">
                 <!-- начала кыргызстан-->
                 <LinearLayout
                     android:id="@+id/kgzLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/round_back_white10"
-                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="20dp">
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:padding="20dp"
 
+                    android:background="@drawable/round_back_white10">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/kgz" />
-
+                        android:src="@drawable/exam"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/quiz_name_1"
                         android:textColor="#CC000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
                 </LinearLayout>
-                <!-- начала география-->
-                <!--  <LinearLayout
-                      android:id="@+id/globusLayout"
-                      android:layout_width="0dp"
-                      android:layout_height="wrap_content"
-                      android:layout_weight="1"
-                      android:orientation="vertical"
-                      android:gravity="center"
-                      android:padding="20dp"
-                      android:layout_marginStart="5dp"
-                      android:background="@drawable/round_back_white10">
-                      <ImageView
-                          android:layout_width="80dp"
-                          android:layout_height="80dp"
-                          android:src="@drawable/globus"/>
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_marginTop="8dp"
-                          android:text="@string/quiz_name_2"
-                          android:textColor="#CC000000"
-                          android:textSize="18sp"
-                          android:textStyle="bold"/>
-                  </LinearLayout>-->
-              </LinearLayout>
-              <!-- начала 2 линии-->
+
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/line_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                android:id="@+id/globusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:background="@drawable/round_back_white10">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/test"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/quiz_name_2"
+                    android:textColor="#CC000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            </LinearLayout>
+            <!-- начала 2 линии-->
+            <LinearLayout
+                android:id="@+id/line_3"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_below="@+id/line_1"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:weightSum="2">
                 <!-- начала спрот-->
                 <LinearLayout
                     android:id="@+id/sportLayout"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:padding="20dp"
-                    android:layout_marginEnd="5dp"
                     android:background="@drawable/round_back_white10">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/sport"/>
+                        android:src="@drawable/znak"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/quiz_name_3"
                         android:textColor="#CC000000"
-                        android:textSize="18sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <!-- начала жава-->
-                <LinearLayout
-                    android:id="@+id/javaLayout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="20dp"
-                    android:layout_marginStart="5dp"
-                    android:background="@drawable/round_back_white10">
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/java"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/quiz_name_4"
-                        android:textColor="#CC000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
+
 
             </LinearLayout>
-            <!-- начала 3 линии-->
-            <LinearLayout
-                android:id="@+id/line_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:weightSum="2">
-                <!-- начала кыргызстан-->
-                <LinearLayout
-                    android:id="@+id/usa_layuot"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="20dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="@drawable/round_back_white10">
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/usa"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="USA"
-                        android:textColor="#CC000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-                <!-- начала география-->
-                <LinearLayout
-                    android:id="@+id/basket_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="20dp"
-                    android:layout_marginStart="5dp"
-                    android:background="@drawable/round_back_white10">
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/basket"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="баскетбол"
-                        android:textColor="#CC000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-            </LinearLayout>
-            <!-- начала 4 линии-->
             <LinearLayout
                 android:id="@+id/line_4"
 
@@ -244,61 +170,79 @@
                 android:orientation="horizontal"
                 android:layout_below="@+id/line_1"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:weightSum="2">
                 <!-- начала спрот-->
                 <LinearLayout
-                    android:id="@+id/footbal_layout"
-                    android:layout_width="0dp"
+                    android:id="@+id/javaLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:padding="20dp"
-                    android:layout_marginEnd="5dp"
                     android:background="@drawable/round_back_white10">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/footbal"/>
+                        android:src="@drawable/video"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Футбол"
+                        android:text="@string/quiz_name_4"
                         android:textColor="#CC000000"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-                <!-- начала жава-->
-                <LinearLayout
-                    android:id="@+id/c_layout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="20dp"
-                    android:layout_marginStart="5dp"
-                    android:background="@drawable/round_back_white10">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/c" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="c++"
-                        android:textColor="#CC000000"
-                        android:textSize="18sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"/>
                 </LinearLayout>
 
             </LinearLayout>
+            <!-- начала 3 линии-->
+            <LinearLayout
+                android:id="@+id/line_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:weightSum="2">
+                <!-- начала кыргызстан-->
+                <LinearLayout
+                    android:id="@+id/usa_layuot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:background="@drawable/round_back_white10">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/number"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/quiz_name_5"
+                        android:textColor="#CC000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- начала 4 линии-->
+
+
+
             <!--konec 4 lini -->
 
 
@@ -330,12 +274,13 @@
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Выход"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="16sp"
         android:layout_below="@+id/currentUser"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Выход"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#0A52FF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 </RelativeLayout>

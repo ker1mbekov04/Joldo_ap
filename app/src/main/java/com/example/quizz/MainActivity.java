@@ -51,7 +51,7 @@ TextView user;
         user = findViewById(R.id.currentUser);
 
         kgz = findViewById(R.id.kgzLayout);
-        globus = findViewById(R.id.globusLayout);
+       // globus = findViewById(R.id.globusLayout);
         sport = findViewById(R.id.sportLayout);
         java = findViewById(R.id.javaLayout);
 
