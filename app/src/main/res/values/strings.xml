@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Quizz</string>
-    <string name="choose_quiz">Выберите\nвикторину</string>
+    <string name="app_name">JOLDO</string>
+    <string name="choose_quiz">Выберите</string>
     <string name="choose_quiz_2">Выберите викторину</string>
     <string name="next_question">Следующий вопрос</string>
     <string name="start_new_quiz">Начать\nновую викторину</string>
@@ -8,14 +8,11 @@
     <string name="start">Начать</string>
 
 
-    <string name="quiz_name_1">Кыргызстан</string>
-    <string name="quiz_name_2">Географиия</string>
-    <string name="quiz_name_3">Спрот</string>
-    <string name="quiz_name_4">Java</string>
+    <string name="quiz_name_1">Экзамен</string>
+    <string name="quiz_name_2">Тест по темам</string>
+    <string name="quiz_name_3">Дорожные знаки</string>
+    <string name="quiz_name_4">Видео уроки</string>
 
-    <string name="quiz_name_5">USA</string>
-    <string name="quiz_name_6">баскетбол</string>
-    <string name="quiz_name_7">Футбол</string>
-    <string name="quiz_name_8">с++</string>
+    <string name="quiz_name_5">Индекс автомобильных номера КР</string>
 
 </resources>
