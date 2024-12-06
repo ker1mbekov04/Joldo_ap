@@ -242,18 +242,7 @@ public class QuestionsBank {
 
 
         questionsList.add(new QuestionsList(
-                "crossroad.png",
-                "Какой знак предупреждает о приближении к перекрестку с круговым движением?",
-                "Знак 'Круговое движение'",
-                "Знак 'Уступи дорогу'",
-                "Знак 'Движение запрещено'",
-                "Знак 'Светофор'",
-                "Знак 'Круговое движение'",
-                ""
-        ));
-
-        questionsList.add(new QuestionsList(
-                "stop.png",
+                "full_stop",
                 "Что нужно сделать при встрече со знаком 'STOP'?",
                 "Полностью остановиться перед стоп-линией",
                 "Снизить скорость до 10 км/ч",
@@ -264,7 +253,7 @@ public class QuestionsBank {
         ));
 
         questionsList.add(new QuestionsList(
-                "overtake.png",
+                "norhoto",
                 "Когда обгон запрещен?",
                 "На пешеходных переходах",
                 "На дорогах с одной полосой",
@@ -286,7 +275,7 @@ public class QuestionsBank {
         ));
 
         questionsList.add(new QuestionsList(
-                "railroad.png",
+                "railroad",
                 "Какой знак указывает на приближение к железнодорожному переезду без шлагбаума?",
                 "Знак с изображением паровоза",
                 "Знак 'Уступи дорогу'",
@@ -296,19 +285,9 @@ public class QuestionsBank {
                 ""
         ));
 
-        questionsList.add(new QuestionsList(
-                "speedlimit.png",
-                "Что означает знак ограничения скорости?",
-                "Максимально допустимую скорость",
-                "Минимально допустимую скорость",
-                "Рекомендуемую скорость",
-                "Скорость для грузовиков",
-                "Максимально допустимую скорость",
-                ""
-        ));
 
         questionsList.add(new QuestionsList(
-                "priorityroad.png",
+                "priorityroad",
                 "Что означает знак 'Главная дорога'?",
                 "Приоритет проезда на перекрестке",
                 "Запрещает обгон",
@@ -319,7 +298,7 @@ public class QuestionsBank {
         ));
 
         questionsList.add(new QuestionsList(
-                "pedestrianzone.png",
+                "pedestrianzone",
                 "Что означает знак 'Пешеходная зона'?",
                 "Движение транспорта запрещено",
                 "Парковка разрешена",
@@ -330,7 +309,7 @@ public class QuestionsBank {
         ));
 
         questionsList.add(new QuestionsList(
-                "crosswalk.png",
+                "crosswalk",
                 "Что обязан сделать водитель, приближаясь к пешеходному переходу?",
                 "Пропустить пешеходов",
                 "Снизить скорость до 20 км/ч",
@@ -341,7 +320,7 @@ public class QuestionsBank {
         ));
 
         questionsList.add(new QuestionsList(
-                "turn.png",
+                "norhoto",
                 "Когда запрещен поворот налево?",
                 "При наличии запрещающего знака или разметки",
                 "При отсутствии встречного транспорта",
