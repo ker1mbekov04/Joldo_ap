@@ -56,7 +56,9 @@ TextView user;
         java = findViewById(R.id.javaLayout);
 
         usa = findViewById(R.id.usa_layuot);
-
+        basket = findViewById(R.id.basket_layout);
+        footbal = findViewById(R.id.footbal_layout);
+        cplus = findViewById(R.id.c_layout);
         SharedPreferences preferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
         String username = preferences.getString("username", null);
         user.setText(username);
