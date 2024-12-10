@@ -45,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Метод для проверки существования пользователя
-    public boolean checkUser(String username) {
+    public boolean checkUser(String username, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_USERNAME + "=?";
         Cursor cursor = db.rawQuery(query, new String[]{username});
