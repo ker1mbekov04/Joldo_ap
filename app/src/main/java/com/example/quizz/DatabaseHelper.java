@@ -9,6 +9,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "userdatabase.db";
     private static final int DATABASE_VERSION = 1;
+    private static final String TABLE_USERS = "users";
+    private static final String COLUMN_ID = "id";
+    private static final String COLUMN_USERNAME = "username";
+    private static final String COLUMN_PASSWORD = "password";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -16,39 +20,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE users (" +
-                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "username TEXT UNIQUE, " +
-                "password TEXT)";
+        String createTable = "CREATE TABLE " + TABLE_USERS + " (" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_USERNAME + " TEXT UNIQUE, " +
+                COLUMN_PASSWORD + " TEXT)";
         db.execSQL(createTable);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS users");
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
     }
 
+    // Метод для регистрации пользователя
     public boolean registerUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("username", username);
-        values.put("password", password);
+        values.put(COLUMN_USERNAME, username);
+        values.put(COLUMN_PASSWORD, password);
 
-        long result = db.insert("users", null, values);
+        long result = db.insert(TABLE_USERS, null, values);
         return result != -1; // Если результат -1, значит, произошла ошибка
     }
 
+    // Метод для проверки существования пользователя
     public boolean checkUser(String username, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String[] columns = { "id" };
-        String selection = "username=? AND password=?";
-        String[] selectionArgs = { username, password };
+        String query = "SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_USERNAME + "=?";
+        Cursor cursor = db.rawQuery(query, new String[]{username});
 
-        Cursor cursor = db.query("users", columns, selection, selectionArgs, null, null, null);
-        int count = cursor.getCount();
+        boolean exists = cursor.getCount() > 0;
         cursor.close();
-        return count > 0;
+        return exists;
     }
 }
-
