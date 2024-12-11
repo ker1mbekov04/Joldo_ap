@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".IndexActivity">
+
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        >
+
+
+
+      <TextView
+          android:layout_gravity="center"
+          android:id="@+id/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Индекс автомобильных номеров Кыргызстана"
+          android:textSize="26sp"
+          android:textStyle="bold"
+          android:layout_marginStart="10dp"
+
+          />
+
+      <TextView
+          android:id="@+id/subtitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/title"
+          android:text="Автомобильные номера Кыргызстана — номерные знаки, предназначенные для регистрации легковых и грузовых автомобилей, автобусов, прицепов, мото- и спецтехники на территории Кыргызской Республики."
+          android:textSize="16sp"
+          android:layout_marginBottom="16dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="8dp"/>
+      <TextView
+          android:id="@+id/history_header"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="22dp"
+          android:layout_marginStart="15dp"
+          android:text="История"
+          android:textStyle="bold"
+          android:layout_marginBottom="8dp" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Впервые номера на автомобилях Киргизии появились в советские времена. С этого времени и вплоть до 1994 года в стране использовались автомобильные номера советского образца, принадлежавшие Киргизской АССР и Киргизской ССР.
+
+В 1992—1994 годах использовались как непосредственно советские номерные знаки, так и их модификация, где кириллические буквы были заменены латиницей.
+
+С 1994 года были введены современные номера. С течением времени форматы номеров претерпевали незначительные изменения, постепенно «подстраиваясь» под необходимые нужды.
+
+В 2015 году был разработан новый стандарт номеров. Выдача новых номерных знаков началась 1 июня [1] 2016 года."/>
+
+
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="22dp"
+          android:layout_marginStart="15dp"
+          android:text="Коды"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="________________________________________________________"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="0dp"/>
+
+      <TableLayout
+          android:id="@+id/tableLayout1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+      android:padding="16dp">
+
+      <!-- Заголовок таблицы -->
+      <TableRow>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Коды с 2016 года (примеры с изобр.)"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#D3D3D3"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Регион"
+            android:textStyle="bold" />
+
+
+      </TableRow>
+
+      <!-- Строка с данными -->
+      <TableRow
+          android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:src="@drawable/n01"
+            android:layout_margin="2dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бишкек"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:padding="8dp" />
+
+
+      </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n02"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Ош"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n03"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Баткенская область"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n04"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Джалабадская область"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n05"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Нарынская область"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n06"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Ошская область"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n07"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Таласская область"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n08"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Чуйская область"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="3dp">
+          <ImageView
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:src="@drawable/n09"
+              android:layout_margin="2dp"/>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Иссык-Кульская область"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:padding="8dp" />
+
+        </TableRow>
+
+
+
+
+      <!-- Дополнительные строки можно добавить здесь -->
+    </TableLayout>
+
+
+
+
+
+
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="20dp"
+          android:layout_marginStart="15dp"
+          android:text="Типы выдаваемых номерных знаков"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+        android:text="________________________________________________________"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="0dp"/>
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="20dp"
+          android:layout_marginStart="15dp"
+          android:text="Общие номерные знаки"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"/>
+
+
+      <TableLayout
+          android:id="@+id/tableLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:padding="16dp">
+
+      <!-- Заголовок таблицы -->
+      <TableRow>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Изображение номера"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#D3D3D3"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:background="#D3D3D3"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Описание"
+            android:textStyle="bold" />
+
+      </TableRow>
+
+      <!-- Строка с данными -->
+        <TableRow>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              android:layout_gravity="center"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="До 2016 года:"
+                android:textStyle="bold|italic"/>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+              android:src="@drawable/n1"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/n2"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:src="@drawable/n3"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/n4"
+                android:layout_margin="2dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="С 2016 года:"
+                android:textStyle="bold|italic"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:src="@drawable/n5"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/n6"
+                android:layout_margin="2dp"/>
+
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              >
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Тип 1 — Номерной знак юридических лиц."
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+              android:text="До конца 1990-х годов грузовые автомобили и автобусы имели укороченный формат номеров по сравнению с легковыми автомобилями юридических лиц, а также имели двухрядный квадратный задний номер. С конца 1990-х годов формат «ЦЦЦЦ ББ» (где Ц — цифра, Б — буква) стал выдаваться на все типы автотранспорта юридических лиц, двухрядный номерной знак юридических лиц совпадает со старым двухрядным номерным знаком физических лиц. Первая буква обозначает регион регистрации.
+
+С июня 2016 года регион стал печататься в отдельном окошке слева, а все буквы и цифры обозначают серию номера."/>
+
+
+
+
+          </LinearLayout>
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________________________"
+
+            android:layout_marginTop="0dp"/>
+
+
+
+        <TableRow>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              android:layout_gravity="center"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="До 2016 года:"
+                android:textStyle="bold|italic"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:src="@drawable/nn1"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:src="@drawable/nn2"
+                android:layout_margin="2dp"/>
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/nn3"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/nn4"
+                android:layout_margin="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="С 2016 года:"
+                android:textStyle="bold|italic"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:src="@drawable/nn5"
+                android:layout_margin="2dp"/>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/nn6"
+                android:layout_margin="2dp"/>
+
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              >
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Тип 2 — Номерной знак физических лиц."
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Изначально номер состоял из изображения флага Киргизии, латинской буквы, обозначающей субъект страны, четырёх цифр и латинской буквы серии. Где-то с 2008—2009 года в конце номера стала ставится не одна, а две латинские буквы серии.
+
+Существовал также двухрядный квадратный вариант заднего номерного знака, заменённый позже на двухрядный прямоугольный, для совместимости с местом крепления номерного знака автомобилей американского и японского производства.
+
+С 2014 года в Киргизии официально разрешена выдача индивидуальных номеров. Номера выдаются за дополнительную плату 100 тысяч сомов (около 2000 долларов США), номер должен содержать от двух до семи символов, из которых первые два — обязательно буквы, разрешается использовать только буквы латинского алфавита и арабские цифры.[2]
+
+С июня 2016 года формат номера изменился: регион стал печататься в виде двузначного числа в отдельном окошке слева, а все буквы и цифры стали обозначать серию номера. Индивидуальные номера также остались."/>
+
+
+
+
+          </LinearLayout>
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________________________"
+
+            android:layout_marginTop="0dp"/>
+
+        <TableRow>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              android:layout_gravity="center"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="До 2016 года:"
+                android:textStyle="bold|italic"/>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/n7"
+                android:layout_margin="2dp"/>
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/n8"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/n9"
+                android:layout_margin="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="С 2016 года:"
+                android:textStyle="bold|italic"/>
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/n10"
+                android:layout_margin="2dp"/>
+
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              >
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Тип 3 — Номерной знак мотоциклов, мотороллеров, мотоколясок, мотокартов и мопедов."
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Тип 4 — Номерной знак для автомобильных прицепов и полуприцепов."
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Типы объединены, так как несмотря на их формальное разделение, фактически они абсолютно идентичные.
+
+Номерные знаки квадратные, двухрядные. Изначально имели формат «ЦЦЦ / БББ», затем «ЦЦЦЦ / БББ», где первая буква — регион регистрации, последняя — либо «М» (мотоциклы), либо «Р» (прицепы). Позже на номерах появился флаг Киргизии, тогда же появились однорядные прицепные номера.
+
+После введения трёхбуквенного автомобильного формата, чтобы не было путаницы, для прицепов и мотоциклов был введён новый формат — «ЦЦЦ / ББ», где первая буква — код региона регистрации, вторая буква — произвольная, буквы распределены между мотоциклами и прицепами, слева от букв — изображение флага Киргизии. Буквосочетание KR зарезервировано для мотоциклов ГАИ Киргизии.
+
+С июня 2016 года формат номера изменился: регион стал печататься в виде двузначного числа в отдельном окошке слева, а все буквы и цифры стали обозначать серию номера. Также, с 2016 года данные номера выдаются на трактора, дорожную технику и их прицепы."/>
+
+
+
+
+          </LinearLayout>
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________________________"
+
+            android:layout_marginTop="0dp"/>
+
+        <TableRow>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              android:layout_gravity="center"
+              >
+
+
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/t1"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/t2"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/t3"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/t4"
+                android:layout_margin="2dp"/>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:src="@drawable/t5"
+                android:layout_margin="2dp"/>
+
+
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="8dp"
+              >
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Тип 5 — Номерной знак тракторов и тракторных прицепов."
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Номера данного типа исключительно квадратные двухрядные.
+
+Изначально данный вид номеров выдавался без региональной привязки. В первоначальном варианте формат содержал четыре цифры в верхнем ряду и буквосочетание «KRT» в нижнем, выдавался как тракторам так и тракторным прицепам. Позже появилось разделение на трактора и прицепы: в тракторных номерах стали использовать буквосочетание «TRKR», в прицепах — «PRKR».
+
+Через некоторое время номера стали выдавать с региональной привязкой. Формат слегка изменился: цифр в верхнем ряду стало три, а в нижнем ряду появились буквосочетания вида «TRxy» для тракторов и «TRPxy» для тракторных прицепов (где x — буквенный код региона, y — произвольная чередующаяся буква).
+
+С июня 2016 года отдельный тип номеров для тракторов и их прицепов упразднён, данной технике выдаются номера мотоциклетно-прицепного формата."/>
+
+
+
+
+          </LinearLayout>
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________________________"
+
+            android:layout_marginTop="0dp"/>
+
+      <!-- Дополнительные строки можно добавить здесь -->
+    </TableLayout>
+
+
+
+
+
+
+  </LinearLayout>
+
+
+  </ScrollView>
+
+
+  </RelativeLayout>
