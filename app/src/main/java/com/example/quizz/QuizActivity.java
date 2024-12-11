@@ -29,7 +29,7 @@ public class QuizActivity extends AppCompatActivity {
     private Timer quizTimer;
 
     private int seconds = 0;
-    private int totalTimeinMins = 1;
+    private int totalTimeinMins = 25;
     private List<QuestionsList> questionsList;
 
     private int currentQuestionPosition = 0;

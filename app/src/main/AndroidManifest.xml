@@ -12,19 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quizz"
         tools:targetApi="31">
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".TemaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideoDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideosActivity"
+            android:exported="false" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".QuizActivity"></activity>
-        <activity android:name=".QuizRezults"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".QuizRezults" />
     </application>
 
 </manifest>
