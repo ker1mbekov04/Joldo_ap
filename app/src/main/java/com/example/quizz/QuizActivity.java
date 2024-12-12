@@ -171,6 +171,8 @@ public class QuizActivity extends AppCompatActivity {
         option2.setText(currentQuestion.getOption2());
         option3.setText(currentQuestion.getOption3());
         option4.setText(currentQuestion.getOption4());
+        questions.setText((currentQuestionPosition + 1) + "/" + questionsList.size());
+
 
         // Сброс стилей кнопок
         resetOptionsAppearance();

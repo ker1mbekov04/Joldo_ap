@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout test;
     private LinearLayout testTema;
-    private LinearLayout sport;
+    private LinearLayout videolearn;
     private LinearLayout java;
 
     private LinearLayout usa;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         test = findViewById(R.id.testLayout);
         testTema = findViewById(R.id.testTema);
-        sport = findViewById(R.id.sportLayout);
+        videolearn = findViewById(R.id.sportLayout);
         java = findViewById(R.id.javaLayout);
 
         usa = findViewById(R.id.usa_layuot);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        sport.setOnClickListener(v -> setSelectedTopic("sport"));
+        videolearn.setOnClickListener(v -> setSelectedTopic("sport"));
 
         java.setOnClickListener(v -> setSelectedTopic("java"));
 
@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
             case "test":
                 test.setBackgroundResource(R.drawable.round_back_white_stroke10);
                 break;
-            case "sport":
-                sport.setBackgroundResource(R.drawable.round_back_white_stroke10);
+            case "testtema":
+                testTema.setBackgroundResource(R.drawable.round_back_white_stroke10);
                 break;
             case "java":
                 java.setBackgroundResource(R.drawable.round_back_white_stroke10);
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
         test.setBackgroundResource(R.drawable.round_back_white10);
         testTema.setBackgroundResource(R.drawable.round_back_white10);
-        sport.setBackgroundResource(R.drawable.round_back_white10);
+        videolearn.setBackgroundResource(R.drawable.round_back_white10);
         java.setBackgroundResource(R.drawable.round_back_white10);
 
         usa.setBackgroundResource(R.drawable.round_back_white10);

@@ -502,17 +502,17 @@ public class QuestionsBank {
         // Перемешиваем список
         Collections.shuffle(questionsList);
 
-        return questionsList;
+        return questionsList.subList(0, Math.min(20, questionsList.size()));
     }
 
     private static List<QuestionsList> testTemaquestions() {
+        // Здесь аналогичная логика для другой категории вопросов
+        final List<QuestionsList> allTemaQuestionsList = new ArrayList<>();
+        // Добавить вопросы...
+        Collections.shuffle(allTemaQuestionsList);
 
-        final List<QuestionsList> questionsList = new ArrayList<>(
-
-        );
-        Collections.shuffle(questionsList);
-
-        return questionsList;
+        // Выбираем 20 случайных вопросов
+        return allTemaQuestionsList.subList(0, Math.min(20, allTemaQuestionsList.size()));
     }
 
     public static List<QuestionsList> getQuestions(String selectedTopicName) {
@@ -522,6 +522,5 @@ public class QuestionsBank {
 
         }
         return null;
-
     }
 }
