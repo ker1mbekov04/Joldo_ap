@@ -61,6 +61,24 @@ public class MainActivity extends AppCompatActivity {
         String username = preferences.getString("username", null);
         user.setText(username);
         loadSelectedTopic();
+        // Находим элемент sportLayout по ID
+        LinearLayout sportLayout = findViewById(R.id.sportLayout);
+
+        // Устанавливаем обработчик клика
+        sportLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Создаем Intent для перехода в ZnakActivity
+                Intent intent = new Intent(MainActivity.this, ZnakActivity.class);
+
+                // Передаем данные в ZnakActivity (например, изображение и описание)
+                intent.putExtra("imageResId", R.drawable.p); // Замените на ваше изображение
+                intent.putExtra("description", "Это описание знака"); // Описание
+
+                // Запускаем ZnakActivity
+                startActivity(intent);
+            }
+        });
 
         test.setOnClickListener(v -> setSelectedTopic("test"));
 
