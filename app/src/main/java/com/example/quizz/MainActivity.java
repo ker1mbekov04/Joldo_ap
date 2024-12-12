@@ -21,16 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
     private String selectedTopic = " ";
 
-    private LinearLayout kgz;
-    private LinearLayout globus;
-    private LinearLayout sport;
+    private LinearLayout test;
+    private LinearLayout testTema;
+    private LinearLayout videolearn;
     private LinearLayout java;
 
     private LinearLayout usa;
     private LinearLayout basket;
     private LinearLayout footbal;
     private LinearLayout cplus;
-TextView user;
+    TextView user;
     private SharedPreferences sharedPreferences;
     public static final String PREFS_NAME = "user_prefs";
     private static final String KEY_SELECTED_TOPIC = "selected_topic";
@@ -50,9 +50,9 @@ TextView user;
         mediaPlayerOption = MediaPlayer.create(this, R.raw.najati);
         user = findViewById(R.id.currentUser);
 
-        kgz = findViewById(R.id.kgzLayout);
-       // globus = findViewById(R.id.globusLayout);
-        sport = findViewById(R.id.sportLayout);
+        test = findViewById(R.id.testLayout);
+        testTema = findViewById(R.id.testTema);
+        videolearn = findViewById(R.id.sportLayout);
         java = findViewById(R.id.javaLayout);
 
         usa = findViewById(R.id.usa_layuot);
@@ -62,89 +62,33 @@ TextView user;
         user.setText(username);
         loadSelectedTopic();
 
-        kgz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("kgz");
+        test.setOnClickListener(v -> setSelectedTopic("test"));
+
+        testTema.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TemaActivity.class);
+            startActivity(intent);
+        });
+
+        videolearn.setOnClickListener(v -> setSelectedTopic("sport"));
+
+        java.setOnClickListener(v -> setSelectedTopic("java"));
+
+        usa.setOnClickListener(v -> setSelectedTopic("usa"));
+
+        startQuizBtn.setOnClickListener(v -> {
+            if (selectedTopic.isEmpty()) {
+                mediaPlayerFail.start();
+                Toast.makeText(MainActivity.this, "Выберите викторину", Toast.LENGTH_SHORT).show();
+            } else {
+                mediaPlayerNext.start();
+                Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+                intent.putExtra("selectedTopic", selectedTopic);
+                startActivity(intent);
+                finish();
             }
         });
 
-        globus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("globus");
-            }
-        });
-
-        sport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("sport");
-            }
-        });
-
-        java.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("java");
-            }
-        });
-
-        usa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("usa");
-            }
-        });
-
-        basket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("basket");
-            }
-        });
-
-        footbal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("footbal");
-            }
-        });
-
-        cplus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setSelectedTopic("cplus");
-            }
-        });
-
-        startQuizBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (selectedTopic.isEmpty()) {
-                    mediaPlayerFail.start();
-                    Toast.makeText(MainActivity.this, "Выберите викторину", Toast.LENGTH_SHORT).show();
-                } else {
-                    mediaPlayerNext.start();
-                    Intent intent = new Intent(MainActivity.this, QuizActivity.class);
-                    intent.putExtra("selectedTopic", selectedTopic);
-                    startActivity(intent);
-                    finish();
-                }
-            }
-        });
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logout();
-                Log.d("SharedPreferences", "Content after clearing: " + sharedPreferences.getAll().toString());
-
-            }
-        });
-
-
-
+        btnLogout.setOnClickListener(v -> logout());
     }
 
     private void setSelectedTopic(String topic) {
@@ -154,29 +98,17 @@ TextView user;
         mediaPlayerOption.start();
 
         switch (topic) {
-            case "kgz":
-                kgz.setBackgroundResource(R.drawable.round_back_white_stroke10);
+            case "test":
+                test.setBackgroundResource(R.drawable.round_back_white_stroke10);
                 break;
-            case "globus":
-                globus.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                break;
-            case "sport":
-                sport.setBackgroundResource(R.drawable.round_back_white_stroke10);
+            case "testtema":
+                testTema.setBackgroundResource(R.drawable.round_back_white_stroke10);
                 break;
             case "java":
                 java.setBackgroundResource(R.drawable.round_back_white_stroke10);
                 break;
             case "usa":
                 usa.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                break;
-            case "basket":
-                basket.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                break;
-            case "footbal":
-                footbal.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                break;
-            case "cplus":
-                cplus.setBackgroundResource(R.drawable.round_back_white_stroke10);
                 break;
         }
     }
@@ -208,14 +140,11 @@ TextView user;
     public void clearBorderQuizz() {
         startQuizBtn.setText(R.string.start);
 
-        kgz.setBackgroundResource(R.drawable.round_back_white10);
-        globus.setBackgroundResource(R.drawable.round_back_white10);
-        sport.setBackgroundResource(R.drawable.round_back_white10);
+        test.setBackgroundResource(R.drawable.round_back_white10);
+        testTema.setBackgroundResource(R.drawable.round_back_white10);
+        videolearn.setBackgroundResource(R.drawable.round_back_white10);
         java.setBackgroundResource(R.drawable.round_back_white10);
 
         usa.setBackgroundResource(R.drawable.round_back_white10);
-        basket.setBackgroundResource(R.drawable.round_back_white10);
-        footbal.setBackgroundResource(R.drawable.round_back_white10);
-        cplus.setBackgroundResource(R.drawable.round_back_white10);
     }
 }

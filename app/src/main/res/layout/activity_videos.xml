@@ -1,0 +1,110 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0D1F6BB8">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1F6BBB"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/levo" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/video1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Основы ПДД"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/video2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Правила проезда перекрестков"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/video3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Как правильно обгонять"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/video4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дорожные знаки"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/video5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Правила остановки и стоянки"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/video6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Скоростные ограничения"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/video7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пешеходы и их права"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/video8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Первая помощь при ДТП"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:background="@drawable/round_back_white10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+
+</LinearLayout>
