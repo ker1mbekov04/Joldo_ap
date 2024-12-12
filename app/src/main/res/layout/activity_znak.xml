@@ -1,42 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Область для отображения знака -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Фото знака -->
+            <ImageView
+                android:id="@+id/imageViewSignDetail"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/p"
+                android:contentDescription="@string/sign_image"/>
+
+            <!-- Описание знака -->
+            <TextView
+                android:id="@+id/textViewSignDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Описание знака"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Кнопки для навигации -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="16dp">
 
-        <!-- Фото знака -->
-        <ImageView
-            android:id="@+id/imageViewSignDetail"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/p"
-            android:contentDescription="@string/sign_image"/>
-
-        <!-- Описание знака -->
-        <TextView
-            android:id="@+id/textViewSignDescription"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/buttonPrevious"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Пешеходный переход, обозначенный знаками 5.19.1, 5.19.2 и (или) разметкой 1.14.1 и 1.14.2.Приближаясь к нерегулируемому пешеходному переходу, водитель должен повысить внимание, быть готовым, чтобы снизить скорость или остановиться уступая дорогу пешеходам, переходящим проезжую часть.
+            android:text="Назад"/>
 
-Наказание за нарушение требований знака:
-
-КоН КР 188-1 часть 2: нарушение правил проезда пешеходных переходов, непредставление преимущества в движении пешеходам на пешеходных переходах;
-
-– штраф 3000 сом. (70% скидка)
-
-устанавливают вне населенных пунктов перед всеми нерегулируемыми наземными пешеходными переходами, а в населенных пунктах - перед переходами, расстояние видимости которых менее 150 м."
-            android:textSize="16sp"
-            android:lineSpacingExtra="4dp"
-            android:textColor="@android:color/black"/>
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вперед"
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
-</ScrollView>
-
+</LinearLayout>

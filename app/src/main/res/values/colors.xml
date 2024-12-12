@@ -41,4 +41,5 @@
     <color name="secondary_blue">#FF64B5F6</color>
     <color name="primary_green">#FF2E7D32</color>
     <color name="secondary_green">#FF81C784</color>
+    <color name="blue">#2196F3</color>
 </resources>

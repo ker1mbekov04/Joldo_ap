@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout testTema;
     private LinearLayout videolearn;
     private LinearLayout java;
-
+    private LinearLayout sportLayout;
     private LinearLayout usa;
     private LinearLayout basket;
     private LinearLayout footbal;
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         user.setText(username);
         loadSelectedTopic();
         // Находим элемент sportLayout по ID
-        LinearLayout sportLayout = findViewById(R.id.sportLayout);
+        sportLayout = findViewById(R.id.sportLayout);
 
         // Устанавливаем обработчик клика
         sportLayout.setOnClickListener(new View.OnClickListener() {
