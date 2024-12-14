@@ -31,6 +31,7 @@ public class IndexActivity extends AppCompatActivity {
 
         // Если это TableRow, измените тип на TableRow
         TextView historyHeader = findViewById(R.id.history_header);
+        TextView typesHeader = findViewById(R.id.type_code);;
         TableRow codesHeader = findViewById(R.id.codes);
         TableRow type1Header = findViewById(R.id.type_1);
         TableRow type2Header = findViewById(R.id.type_2);
@@ -48,7 +49,7 @@ public class IndexActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.go_to_type).setOnClickListener(view -> {
-            scrollView.smoothScrollTo(0, type1Header.getTop());
+            scrollView.smoothScrollTo(0, typesHeader.getTop());
         });
 
         findViewById(R.id.go_to_type_1).setOnClickListener(view -> {
