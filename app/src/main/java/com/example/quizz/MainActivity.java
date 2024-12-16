@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout test;
     private LinearLayout testTema;
-    private LinearLayout sport;
+    private LinearLayout videolearn;
     private LinearLayout java;
-
+    private LinearLayout sportLayout;
     private LinearLayout usa;
     private LinearLayout basket;
     private LinearLayout footbal;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         test = findViewById(R.id.testLayout);
         testTema = findViewById(R.id.testTema);
-        sport = findViewById(R.id.sportLayout);
+        videolearn = findViewById(R.id.sportLayout);
         java = findViewById(R.id.javaLayout);
 
         usa = findViewById(R.id.usa_layuot);
@@ -61,7 +61,24 @@ public class MainActivity extends AppCompatActivity {
         String username = preferences.getString("username", null);
         user.setText(username);
         loadSelectedTopic();
+        // Находим элемент sportLayout по ID
+        sportLayout = findViewById(R.id.sportLayout);
 
+        // Устанавливаем обработчик клика
+        sportLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Создаем Intent для перехода в ZnakActivity
+                Intent intent = new Intent(MainActivity.this, ZnakActivity.class);
+
+                // Передаем данные в ZnakActivity (например, изображение и описание)
+                intent.putExtra("imageResId", R.drawable.p); // Замените на ваше изображение
+                intent.putExtra("description", "Это описание знака"); // Описание
+
+                // Запускаем ZnakActivity
+                startActivity(intent);
+            }
+        });
 
         test.setOnClickListener(v -> setSelectedTopic("test"));
 
@@ -69,22 +86,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, TemaActivity.class);
             startActivity(intent);
         });
-        sport.setOnClickListener(v -> {
-            setSelectedTopic("usa"); // Устанавливаем тему
-            Intent intent = new Intent(MainActivity.this, ZnakActivity.class); // Создаем Intent
-            startActivity(intent); // Запускаем IndexActivity
-        });
 
-
+        videolearn.setOnClickListener(v -> setSelectedTopic("sport"));
 
         java.setOnClickListener(v -> setSelectedTopic("java"));
 
-        usa.setOnClickListener(v -> {
-            setSelectedTopic("usa"); // Устанавливаем тему
-            Intent intent = new Intent(MainActivity.this, IndexActivity.class); // Создаем Intent
-            startActivity(intent); // Запускаем IndexActivity
-        });
-
+        usa.setOnClickListener(v -> setSelectedTopic("usa"));
 
         startQuizBtn.setOnClickListener(v -> {
             if (selectedTopic.isEmpty()) {
@@ -121,9 +128,6 @@ public class MainActivity extends AppCompatActivity {
             case "usa":
                 usa.setBackgroundResource(R.drawable.round_back_white_stroke10);
                 break;
-            case "sport":
-                sport.setBackgroundResource(R.drawable.round_back_white_stroke10);
-                break;
         }
     }
 
@@ -156,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
         test.setBackgroundResource(R.drawable.round_back_white10);
         testTema.setBackgroundResource(R.drawable.round_back_white10);
-        sport.setBackgroundResource(R.drawable.round_back_white10);
+        videolearn.setBackgroundResource(R.drawable.round_back_white10);
         java.setBackgroundResource(R.drawable.round_back_white10);
 
         usa.setBackgroundResource(R.drawable.round_back_white10);
