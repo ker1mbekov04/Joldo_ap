@@ -30,7 +30,7 @@ public class QuestionsBank {
                 "Въезд запрещен",
                 ""));
         questionsList.add(new QuestionsList(
-                "jilai",
+                "jiloi",
                 "Что обозначает этот знак?",
                 "Место для парковки",
                 "Пешеходный переход",
@@ -50,8 +50,8 @@ public class QuestionsBank {
                 ""));
 
         questionsList.add(new QuestionsList(
-                "give_way",
-                "Какой знак означает 'Уступи дорогу'?",
+                "ustupiznak",
+                "Какой означает этот знак?",
                 "Стоп",
                 "Главная дорога",
                 "Уступи дорогу",
@@ -161,7 +161,7 @@ public class QuestionsBank {
 
         questionsList.add(new QuestionsList(
                 "bridge",
-                "Что означает знак 'Подъемный мост'?",
+                "Что означает данный знак?",
                 "Опасный участок дороги",
                 "Подъемный мост",
                 "Дорожные работы",
@@ -275,7 +275,7 @@ public class QuestionsBank {
         ));
 
         questionsList.add(new QuestionsList(
-                "railroad",
+                "norhoto",
                 "Какой знак указывает на приближение к железнодорожному переезду без шлагбаума?",
                 "Знак с изображением паровоза",
                 "Знак 'Уступи дорогу'",

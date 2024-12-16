@@ -12,7 +12,6 @@
 
 
   <ScrollView
-      xmlns:android="http://schemas.android.com/apk/res/android"
       android:id="@+id/scrollView"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
@@ -178,14 +177,14 @@
 
 
       <TextView
-
+          android:id="@+id/codes"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:textSize="22dp"
+          android:layout_height="36dp"
           android:layout_marginStart="15dp"
+          android:layout_marginTop="20dp"
           android:text="Коды"
-          android:textStyle="bold"
-          android:layout_marginTop="20dp"/>
+          android:textSize="22dp"
+          android:textStyle="bold" />
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -202,7 +201,7 @@
 
       <!-- Заголовок таблицы -->
       <TableRow
-          android:id="@+id/codes">
+          >
 
         <TextView
             android:layout_width="180dp"
@@ -452,7 +451,7 @@
 
       <!-- Строка с данными -->
         <TableRow
-            android:id="@+id/type_1">
+            >
           <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -514,6 +513,7 @@
               >
 
             <TextView
+                android:id="@+id/type_1"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:text="Тип 1 — Номерной знак юридических лиц."
@@ -542,7 +542,7 @@
 
 
         <TableRow
-            android:id="@+id/type_2">
+            >
           <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -605,6 +605,7 @@
               >
 
             <TextView
+                android:id="@+id/type_2"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:text="Тип 2 — Номерной знак физических лиц."
@@ -635,7 +636,7 @@
             android:layout_marginTop="0dp"/>
 
         <TableRow
-            android:id="@+id/type_3_4">
+            >
           <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -690,6 +691,7 @@
               >
 
             <TextView
+                android:id="@+id/type_3_4"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:text="Тип 3 — Номерной знак мотоциклов, мотороллеров, мотоколясок, мотокартов и мопедов."
@@ -725,7 +727,7 @@
             android:layout_marginTop="0dp"/>
 
         <TableRow
-            android:id="@+id/type_5">
+            >
           <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -775,6 +777,7 @@
               >
 
             <TextView
+                android:id="@+id/type_5"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:text="Тип 5 — Номерной знак тракторов и тракторных прицепов."
