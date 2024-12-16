@@ -24,6 +24,7 @@ public class QuizRezults extends AppCompatActivity {
         final AppCompatButton startNewQuizBtn = findViewById(R.id.startNewQuizBtn);
         final TextView correctAnswears = findViewById(R.id.correctAnswears);
         final TextView incorrectAnswears = findViewById(R.id.incorrectAnswears);
+        final TextView otvet = findViewById(R.id.otvet);
 
         // Найдите текстовые поля для баллов и процента
         final TextView scoreText = findViewById(R.id.scoreText);
@@ -47,14 +48,14 @@ public class QuizRezults extends AppCompatActivity {
         percentageText.setText("Процент: " + String.format("%.2f", percentage) + "%"); // Отображаем процент с двумя знаками после запятой
 
         // Проверка по баллам и процентам
-        if (getCorrectAnswers >= 5 && percentage >= 70) {
+        if (getCorrectAnswers >= 18 && percentage >= 90) {
             // Если правильных ответов больше или равно 5 и процент правильных ответов больше или равен 70%
             // выполняем соответствующее действие
             // например, показываем сообщение о том, что пользователь прошел тест
-            Log.d("QuizResults", "Тест пройден");
+            otvet.setText("Тест пройден ");
         } else {
             // Если не выполнены условия, показываем сообщение о неудаче или выполняем другие действия
-            Log.d("QuizResults", "Тест не пройден");
+            otvet.setText("Тест не пройден ");
         }
 
         startNewQuizBtn.setOnClickListener(new View.OnClickListener() {
