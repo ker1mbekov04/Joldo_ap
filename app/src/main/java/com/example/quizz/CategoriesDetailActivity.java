@@ -1,46 +1,67 @@
 package com.example.quizz;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.view.View;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class CategoriesDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categories_detail);
+        setContentView(R.layout.activity_categories);
 
-        // Получаем данные из Intent
-        Intent intent = getIntent();
-        String znaktitle = intent.getStringExtra("znaktitle");
-        String znakdescription = intent.getStringExtra("znakdescription");
-        int znakthumbnailResId = intent.getIntExtra("znakthumbnailResId", -1);
+        // Найти TextView элементов по ID
+        TextView cat1 = findViewById(R.id.cat1);
+        TextView cat2 = findViewById(R.id.cat2);
+        TextView cat3 = findViewById(R.id.cat3);
+        TextView cat4 = findViewById(R.id.cat4);
+        TextView cat5 = findViewById(R.id.cat5);
 
-        // Связываем элементы интерфейса
-        TextView znakTitle = findViewById(R.id.znakTitle);
-        TextView znakDescription = findViewById(R.id.znakDescription);
-        ImageView znakThumbnail = findViewById(R.id.znakThumbnail);
-        Button backButton = findViewById(R.id.buttonPrevious1);
-        Button nextButton = findViewById(R.id.buttonNext1);
+        // Установить обработчики кликов для каждого элемента
+        cat1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity("Предупреждающие");
+            }
+        });
 
-        // Устанавливаем начальные данные
-        znakTitle.setText(znaktitle);
-        znakDescription.setText(znakdescription);
-        if (znakthumbnailResId != -1) {
-            znakThumbnail.setImageResource(znakthumbnailResId);
-        }
+        cat2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity("Приоритета");
+            }
+        });
 
+        cat3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity("Запрещающие");
+            }
+        });
 
+        cat4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity("Предписывающие");
+            }
+        });
 
+        cat5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQuizActivity("Особых предписаний");
+            }
+        });
+    }
+
+    // Метод для перехода на QuizActivity с передачей категории
+    private void openQuizActivity(String category) {
+        Intent intent = new Intent(CategoriesDetailActivity.this, QuizActivity.class);
+        intent.putExtra("category", category); // Передаем выбранную категорию
+        startActivity(intent);
     }
 }

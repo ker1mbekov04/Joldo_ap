@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
         startQuizBtn = findViewById(R.id.startQuizBtn);
@@ -56,24 +58,47 @@ public class MainActivity extends AppCompatActivity {
         java = findViewById(R.id.javaLayout);
 
         usa = findViewById(R.id.usa_layuot);
+        sportLayout = findViewById(R.id.sportLayout);
 
         SharedPreferences preferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
         String username = preferences.getString("username", null);
         user.setText(username);
         loadSelectedTopic();
+        // Найти LinearLayout по ID
+sportLayout.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
+        startActivity(intent);
+    }
+});
 
-
-        // Устанавливаем обработчик клика
-       videolearn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Создаем Intent для перехода в ZnakActivity
-                Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
-
-                // Запускаем ZnakActivity
-                startActivity(intent);
-            }
-        });
+        // Установить обработчик клика
+//        sportLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Переход на CategoriesActivity
+//
+//            }
+//        });
+        // Находим элемент sportLayout по ID
+//        sportLayout = findViewById(R.id.sportLayout);
+//
+//        // Устанавливаем обработчик клика
+//        sportLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Создаем Intent для перехода в ZnakActivity
+//                Intent intent = new Intent(MainActivity.this, ZnakActivity.class);
+//
+//                // Передаем данные в ZnakActivity (например, изображение и описание)
+//                intent.putExtra("imageResId", R.drawable.p); // Замените на ваше изображение
+//                intent.putExtra("description", "Это описание знака"); // Описание
+//
+//                // Запускаем ZnakActivity
+//                startActivity(intent);
+//            }
+//        });
 
         test.setOnClickListener(v -> setSelectedTopic("test"));
 
@@ -82,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
+//        videolearn.setOnClickListener(v -> setSelectedTopic("sport"));
 
         java.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +117,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        usa.setOnClickListener(v -> setSelectedTopic("usa"));
+        usa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, IndexActivity.class);
+                startActivity(intent);
+            }
+        });
 
         startQuizBtn.setOnClickListener(v -> {
             if (selectedTopic.isEmpty()) {
@@ -161,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
 
         test.setBackgroundResource(R.drawable.round_back_white10);
         testTema.setBackgroundResource(R.drawable.round_back_white10);
-        videolearn.setBackgroundResource(R.drawable.round_back_white10);
+//        videolearn.setBackgroundResource(R.drawable.round_back_white10);
         java.setBackgroundResource(R.drawable.round_back_white10);
 
         usa.setBackgroundResource(R.drawable.round_back_white10);
