@@ -16,38 +16,17 @@ public class CategoriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
 
-        ListView listViewCategories = findViewById(R.id.listViewCategories);
 
-        // Список категорий
-        String[] categories = {
-                "Предупреждающие",
-                "Приоритета",
-                "Запрещающие",
-                "Предписывающие",
-                "Особых предписаний",
-                "Информационные",
-                "Сервиса",
-                "Таблички",
-                "Опознавательные"
-        };
 
-        // Адаптер для списка
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                categories
-        );
-        listViewCategories.setAdapter(adapter);
-
-        // Обработка нажатий на элемент списка
-        listViewCategories.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Переход к экрану с деталями категории
-                Intent intent = new Intent(CategoriesActivity.this, SignsActivity.class);
-                intent.putExtra("category", categories[position]);
-                startActivity(intent);
-            }
-        });
     }
+
+    // Метод для передачи данных в VideoDetailActivity
+    private void openDetailPage(String title, String description, String videoUrl,int thumbnailResId) {
+        Intent intent = new Intent(this, CategoriesDetailActivity.class);
+        intent.putExtra("znaktitle", title);
+        intent.putExtra("znakdescription", description);
+        intent.putExtra("znakthumbnailResId",thumbnailResId);
+        startActivity(intent);
+    }
+
 }

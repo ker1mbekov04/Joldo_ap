@@ -61,19 +61,14 @@ public class MainActivity extends AppCompatActivity {
         String username = preferences.getString("username", null);
         user.setText(username);
         loadSelectedTopic();
-        // Находим элемент sportLayout по ID
-        sportLayout = findViewById(R.id.sportLayout);
+
 
         // Устанавливаем обработчик клика
-        sportLayout.setOnClickListener(new View.OnClickListener() {
+       videolearn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Создаем Intent для перехода в ZnakActivity
-                Intent intent = new Intent(MainActivity.this, ZnakActivity.class);
-
-                // Передаем данные в ZnakActivity (например, изображение и описание)
-                intent.putExtra("imageResId", R.drawable.p); // Замените на ваше изображение
-                intent.putExtra("description", "Это описание знака"); // Описание
+                Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
 
                 // Запускаем ZnakActivity
                 startActivity(intent);
@@ -87,9 +82,15 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        videolearn.setOnClickListener(v -> setSelectedTopic("sport"));
 
-        java.setOnClickListener(v -> setSelectedTopic("java"));
+
+        java.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, VideosActivity.class);
+                startActivity(intent);
+            }
+        });
 
         usa.setOnClickListener(v -> setSelectedTopic("usa"));
 
