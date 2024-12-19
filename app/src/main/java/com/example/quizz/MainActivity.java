@@ -102,9 +102,19 @@ sportLayout.setOnClickListener(new View.OnClickListener() {
 
         test.setOnClickListener(v -> setSelectedTopic("test"));
 
-        testTema.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, TemaActivity.class);
-            startActivity(intent);
+        testTema.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Создаем Intent для перехода в ZnakActivity
+                Intent intent = new Intent(MainActivity.this, TemaActivity.class);
+//
+//                // Передаем данные в ZnakActivity (например, изображение и описание)
+//                intent.putExtra("imageResId", R.drawable.p); // Замените на ваше изображение
+//                intent.putExtra("description", "Это описание знака"); // Описание
+
+                // Запускаем ZnakActivity
+                startActivity(intent);
+            }
         });
 
 //        videolearn.setOnClickListener(v -> setSelectedTopic("sport"));

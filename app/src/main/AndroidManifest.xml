@@ -15,6 +15,24 @@
         android:theme="@style/Theme.Quizz"
         tools:targetApi="31">
         <activity
+            android:name=".OsobPedZnak"
+            android:exported="false" />
+        <activity
+            android:name=".PredpisZnak"
+            android:exported="false" />
+        <activity
+            android:name=".ZaprZnak"
+            android:exported="false" />
+        <activity
+            android:name=".PriorZnak"
+            android:exported="false" />
+        <activity
+            android:name=".PredZnaki"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".CategoriesDetailActivity"
             android:exported="false" />
         <activity android:name=".IndexActivity" />
@@ -41,7 +59,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".QuizRezults" />
-        <activity android:name=".CategoriesActivity"/>
+        <activity android:name=".CategoriesActivity" />
     </application>
 
 </manifest>

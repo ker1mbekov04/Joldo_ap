@@ -24,36 +24,44 @@ public class CategoriesActivity extends AppCompatActivity {
         // Установить обработчики кликов для каждого элемента
         cat1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openQuizActivity("Предупреждающие");
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoriesActivity.this, PredZnaki.class);
+                startActivity(intent);
             }
         });
 
         cat2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openQuizActivity("Приоритета");
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoriesActivity.this, PriorZnak.class);
+                startActivity(intent);
             }
         });
 
         cat3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openQuizActivity("Запрещающие");
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoriesActivity.this, ZaprZnak.class);
+                startActivity(intent);
             }
         });
 
         cat4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openQuizActivity("Предписывающие");
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoriesActivity.this, PredpisZnak.class);
+                startActivity(intent);
             }
         });
 
+
+
+
         cat5.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openQuizActivity("Особых предписаний");
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoriesActivity.this, OsobPedZnak.class);
+                startActivity(intent);
             }
         });
     }
